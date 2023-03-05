@@ -9,7 +9,7 @@ services:
     build:
       dockerfile: docker/frontend.Dockerfile
     ports:
-      - "8080:8080"
+      - "8080:80"
     environment:
       - NGINX_HOST=localhost
-      - NGINX_PORT=8080
+      - NGINX_PORT=80

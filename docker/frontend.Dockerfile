@@ -1,10 +1,10 @@
 FROM node:18-alpine as builder
 
-COPY ./ui .
-WORKDIR .
+WORKDIR /app
+COPY ./ui /app/
 RUN npm install
 RUN npm run build
 
 FROM nginx
 WORKDIR .
-COPY ./dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
