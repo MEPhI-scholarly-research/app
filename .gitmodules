@@ -2,5 +2,5 @@
 	path = ui
 	url = https://github.com/MEPhI-scholarly-research/ui
 [submodule "api"]
-	path = server
+	path = api
 	url = https://github.com/MEPhI-scholarly-research/server
